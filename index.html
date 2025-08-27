@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Javascript concept</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+
+    <h1>Async Javascript Concept</h1>
+    <div style="width: 100%;display: flex;align-items: flex-start;justify-content: space-between;">
+
+        <div class="col1" style="width: 50%; padding: 10px;">
+            <p>Async JS is whichver tasks takes time to execute is kept in side stack and in synchronous js it is kept in main stack and whichever is in main stack it is executed first then once the execution is  done then the  side stack task is move to main stack to execute in main stack</p>
+    <p>Lets start with SETTIMEOUT</p>
+    <p>Settimeout where it take some time then execute it take two param function and time to execute like below ex</p>
+    <p>Syntax: SetTimeout(dunction(){console.log("Testing settime"),1000})</p>
+    <p>This means the function will be executed after 1s So in below example we will execute something after sometime</p>
+    <p id="settimeout"></p>
+    <br>
+    <p>Great now lets move with SETINTERVAL</p>
+    <p>SETINTERVAL is like settimeout only but the differnce is that settimeout execute it only one time but setinterval execute it at assigned interval like if we set for 1s it will be continoiusly executing it after 1s</p>
+    <p>So the syntax is: setInterval(function(){},1000)</p>
+    <p>This means the finctions will keep on executing every 1s check below example to get more in detail</p>
+    <p id="setinterval"></p>
+    <br>
+    <p>Great now lets move to fetch</p>
+    <p>fetch is used for requesting an API </p>
+    <p>syntax: fetch(APIURL)
+        .then(raw => raw.json())
+        .then(readable => readablelog)
+    </p>
+    <p>In the above syntax The fetch keyword with API call is to call the API endpoint to get the  data then .thwn in next line it fetch the blob data that in non human radable so we convert that arrow function with json json is human readbale format and next in below .then it store the data in readble function then we can fetch particular data according to our need</p>
+    <p id="letsefetch"></p>
+    <br>
+    <p>Great now lets move  to promise</p>
+    <p>Here the promise it has two param mainly its resolve and reject here if the data comesback then it will call to resolve else it will be rejected</p>
+    <p>Syntax: new promise(function(res,rej){})</p>
+    <p>Now let see below with the example</p>
+    <p id="parchi"></p>
+    <br>
+    <p>Great now lets move to next topic called callbacks</p>
+    <p>Callbacks can be we are calling the function from the function param then that function to be call back and executed</p>
+    <p>Syntax: function display(a,b){b()} display('url',function(){console.log("display")})</p>
+    <p>Here the function display has two param a and b the b is the calling function so whenever ti is called if you see the  display calling function it has the function inside it which is console</p>
+    <p id="checkcallbacks"></p>
+        </div>
+
+        <div class="col2" style="width: 50%;padding: 10px;">
+            <p>Great now lets move to async and await</p>
+            <p>Async and await is like as you know the synchronous code runs on the main stack and asyn code needs to wait untill the sync code is completed its execution</p>
+            <p>Therefore if you apply the async to parrent function and await to any access then untill the await is completed below sync code will not be executed</p>
+            <p>Syntax: async function display(){await fetch();console.log()}</p>
+            <p>Here console.log will not execute first untill the fetch execution is completed</p>
+            <p>Let see with actuall example</p>
+            <p id="asyawi"></p>
+            <br>
+            <p>Lets start with generators</p>
+            <p>Generator concpet is like it execute step by step it like when you give nnext then only it excute next line then next then next</p>
+            <p> Syntax: function* display(){yeald 1} const new= display.next().value</p>
+            <p>Here there is the function at start with * recognized as an generator and yeald is called as breaker to that function. Lets see with example</p>
+            <p id="gen"></p>
+
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
